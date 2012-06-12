@@ -1,0 +1,5 @@
+MT = Environment()
+MT.VariantDir( "obj", "src", duplicate = 0 )
+sources = Glob("obj/*.cpp")
+obj_list = MT.Object( source = sources )
+MT.Program ( target = "bin/MTest", source = obj_list )
